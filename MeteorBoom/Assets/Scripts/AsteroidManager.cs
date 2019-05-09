@@ -9,6 +9,9 @@ public class AsteroidManager : MonoBehaviour {
     [SerializeField] private Transform rightLimit;
     [SerializeField] private float spawnTimer = 2;
 
+    [SerializeField] private ObjectPool explosionPool;
+    [SerializeField] private ObjectPool hitParticlePool;
+
     private int poolSize = 5;
     private float internalTimer;
 
@@ -32,6 +35,7 @@ public class AsteroidManager : MonoBehaviour {
         {
             GameObject obj = (GameObject)Instantiate(asteroidPrefab);
             obj.SetActive(false);
+            obj.GetComponent<AsteroidBehaviour>().SetPools(hitParticlePool, explosionPool);
             asteroidPool.Add(obj);
         }
     }

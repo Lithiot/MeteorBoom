@@ -7,6 +7,15 @@ public class AsteroidBehaviour : MonoBehaviour {
     [SerializeField] private float velocity = 3;
     [SerializeField] private float health = 1;
 
+    private ObjectPool hitParticlesPool;
+    private ObjectPool explosionPool;
+    private float originalHealth;
+
+    private void Awake()
+    {
+        originalHealth = health;
+    }
+
     void Update ()
     {
         transform.Translate(new Vector3(0, -velocity * Time.deltaTime, 0));
@@ -19,7 +28,18 @@ public class AsteroidBehaviour : MonoBehaviour {
         if (health <= 0)
         {
             GameManager.instance.AddMoney();
+            GameObject obj = explosionPool.GetObjectFromPool();
+            obj.transform.position = transform.position;
+            obj.transform.rotation = transform.rotation;
+            obj.SetActive(true);
             gameObject.SetActive(false);
+        }
+        else
+        {
+            GameObject obj = hitParticlesPool.GetObjectFromPool();
+            obj.transform.position = transform.position;
+            obj.transform.rotation = transform.rotation;
+            obj.SetActive(true);
         }
     }
 
@@ -30,5 +50,16 @@ public class AsteroidBehaviour : MonoBehaviour {
             GameManager.instance.CityDamaged();
             gameObject.SetActive(false);
         }
+    }
+
+    public void SetPools(ObjectPool hitparticle, ObjectPool explosion)
+    {
+        hitParticlesPool = hitparticle;
+        explosionPool = explosion;
+    }
+
+    private void OnEnable()
+    {
+        health = originalHealth;
     }
 }

@@ -63,21 +63,23 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AsteroidBehaviour.cs" />
     <Compile Include="Assets\Scripts\AsteroidManager.cs" />
+    <Compile Include="Assets\Scripts\DeactivateExplosion.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\UpdateUI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Agustin/Desktop/Proyectos/Moviles/MeteorBoom/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Agustin/Desktop/Proyectos/MeteorBoom/MeteorBoom/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Agustin/Desktop/Proyectos/Moviles/MeteorBoom/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Agustin/Desktop/Proyectos/MeteorBoom/MeteorBoom/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Agustin/Desktop/Proyectos/Moviles/MeteorBoom/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Agustin/Desktop/Proyectos/MeteorBoom/MeteorBoom/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Agustin/Desktop/Proyectos/Moviles/MeteorBoom/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Agustin/Desktop/Proyectos/MeteorBoom/MeteorBoom/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
